@@ -8,7 +8,7 @@ The system allows for users to input ticket information, display tickets, displa
 
 ## Modules and External Text File
 
-In addition to the main file[Help_Desk_Ticket](Help_Desk_Ticket.py), this program package includes two modules [Ticket](Ticket.py)and [Utils](Utils.py) which contain multiple classes and functions. The external text file [tickets](tickets.txt) is accessed from within the program. Details are updated and then saved to the text file on exit from the program.
+In addition to the main file [Help_Desk_Ticket](Help_Desk_Ticket.py), this program package includes two modules [Ticket](Ticket.py)and [Utils](Utils.py) which contain multiple classes and functions. The external text file [tickets](tickets.txt) is accessed from within the program. Details are updated and then saved to the text file on exit from the program.
 
 ## Classes
 
