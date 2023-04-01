@@ -31,7 +31,7 @@ displayStats - displays the total number of tickets created, the number of ticke
 
 ### User Class
 
-submitTicket - Enter a new ticket instance to be stored in a list. This will include the generation of a new password using index to select and compbine specific fragments of staff_id and staff_name if a Password Change string is detected.
+submitTicket - Enter a new ticket instance to be stored in a list. This will include the generation of a new password using index to select and combine specific fragments of staff_id and staff_name if a Password Change string is detected.
 
 checkEmail - includes validation rules for email syntax.
 
@@ -47,7 +47,7 @@ welcome - includes ascii word art on the opening of the program
 
 loadTickets - Stored data will be retrieved from the external text document and placed in the tickets list.
 
-login - user login to control initial access to the application and to customise permissions for each user with an advisory message at the start.
+login - user login to control initial access to the application and to customise permissions for each user with an instructional message at the start.
 
 menu - display menu choices.
 
