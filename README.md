@@ -14,10 +14,10 @@ In addition to the main file [Help_Desk_Ticket](Help_Desk_Ticket.py), this progr
 
 The following classes are included:
 
-Ticket.
-User.
-HelpDesk.
-ITtech.
+- Ticket
+- User
+- HelpDesk
+- ITtech
 
 ## Methods
 
