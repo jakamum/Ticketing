@@ -13,17 +13,17 @@ from Ticket import *
 #fun welcome function
 def welcome():
     print("""
-                                                    ***Welcome to the***
+                       ***Welcome to the***
                     
-                                ___ ___          .__               ________                    __     
-                                /   |   \   ____  |  |  ______      \______ \    ____    ______|  | __ 
-                                /    ~    \_/ __ \ |  |  \____ \      |    |  \ _/ __ \  /  ___/|  |/ / 
-                                \    Y    /\  ___/ |  |__|  |_> >     |    `   \\  ___/  \___ \ |    <  
-                                \___|_  /  \___  >|____/|   __/     /_______  / \___  >/____  >|__|_ \ 
-                                    \/       \/       |__|                \/      \/      \/      \/ 
+  ___ ___          .__               ________                    __     
+ /   |   \   ____  |  |  ______      \______ \    ____    ______|  | __ 
+/    ~    \_/ __ \ |  |  \____ \      |    |  \ _/ __ \  /  ___/|  |/ / 
+\    Y    /\  ___/ |  |__|  |_> >     |    `   \\  ___/  \___ \ |    <  
+ \___|_  /  \___  >|____/|   __/     /_______  / \___  >/____  >|__|_ \ 
+     \/       \/         |__|                \/      \/      \/      \/ 
+                                                            
                                                                         
-                                                                        
-\n                                                   ***Ticketing System***
+\n                      ***Ticketing System***
 """
 )
     time.sleep(.5)
@@ -31,18 +31,32 @@ def welcome():
 
 #login as helpdesk or ittech
 def login():
+    print("""\n
+    If you are in the Help Desk department, you will have access to the following: \n
+    Submit a Ticket
+    Display Tickets
+    Display Statistics
+    Print Tickets\n\n
+    If you are an IT Technician, you have access to the following: \n
+    Display Tickets
+    Provide a Response
+    Reopen a Ticket
+    Display Statistics
+    Print Tickets
+    _________________________________________________________________________""")
     
-    role = input("Please enter your role:(" + GREEN + "HD " + RESET + "or " +  RED + "IT) " + RESET)
+    
+    role = input("\nPlease enter your role:(" + GREEN + "HD " + RESET + "or " +  RED + "IT) " + RESET)
     password = input("Please enter your password:(" + GREEN + "HD123 " + RESET + "or " +  RED + "IT123) " + RESET)    
     global aUser
 
    
-    if role == "HD" and password == "HD123":            
+    if role.lower() == "hd" and password.lower() == "hd123":            
         aUser = HelpDesk(role, password, "HelpDesk")        
         help.append(aUser)
         return aUser
             
-    elif role == "IT" and password == "IT123": 
+    elif role.lower() == "it" and password.lower() == "it123": 
         aUser = ITtech(role, password, "ITTech")
         tech.append(aUser)
         return aUser
@@ -126,6 +140,7 @@ def processChoice(userChoice):
 
     #print tickets
     elif userChoice == "6":
+        print("\n*****Print Tickets*****")
         Ticket.displayTickets()
 
 #save the tickets to an external text file
