@@ -1,4 +1,4 @@
-# Help Desk Ticketing system
+# Help Desk Ticketing System
 
 Help Desk Ticketing System is an application to enable help desk staff and IT technician to submit tickets and/or update ticket information It was created using Python version 3.9.
 
@@ -47,7 +47,7 @@ welcome - includes ascii word art on the opening of the program
 
 loadTickets - Stored data will be retrieved from the external text document and placed in the tickets list.
 
-login - user login to control initial access to the application and to customise permissions for each  user.
+login - user login to control initial access to the application and to customise permissions for each user with an advisory message at the start.
 
 menu - display menu choices.
 
