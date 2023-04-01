@@ -30,7 +30,7 @@ class Ticket():
         for ticket in tickets:
             
             print("\nTicket Number: ", str(ticket.id) + "\nTicket Creator: " + ticket.staff_name + "\nStaff ID: " + str(ticket.staff_id) + "\nEmall Address: " + ticket.email + "\nDescription: " + ticket.description + "\nResponse: " + ticket.response + "\nTicket Status: " + ticket.status + "\n")
-            print("______________________________________________________________________________________________________________________")
+            print("_________________________________________________________________________")
 
         to_menu = input("\nPlease press enter\n")
 
@@ -48,7 +48,7 @@ class Ticket():
             elif ticket.status == "Closed":
                 closed += 1
 
-        print("*****Statistics*****\n")    
+        print("\n*****Statistics*****\n")    
         print("Tickets Created: ", count)
         print("Tickets To Solve: ", to_solve)
         print("Tickets Resolved: ", closed)
@@ -61,14 +61,14 @@ class User:
         self.password = password
 
     #check email input
-    def checkEmail(email, characters, min_length=6):
+    def checkEmail(email, characters, min_length=8):
         while True:
             for character in characters:
                 if character not in email:
-                    email = input("Your email address must have '{}' in it\nPlease write your email address again: ".format(character))
+                    email = input("\nYour email address must have '{}' in it\nPlease write your email address again: \n".format(character))
                     continue
             if len(email) <= min_length:
-                email = input("Your email address is too short\nPlease write your email address again: ")
+                email = input("\nYour email address is too short\nPlease write your email address again: \n")
                 continue
             return email 
 
@@ -185,4 +185,3 @@ class ITtech(User):
     def __init__(self, role, password, user):
         super().__init__(role, password)
         self.user = user
-
